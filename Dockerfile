@@ -7,4 +7,4 @@ WORKDIR /tmp/ && pip install -qr requirements.txt
 
 EXPOSE 5000
 
-CMD ["/opt/webapp/app.py"]
+CMD ["/opt/webapp/app.py" "run"]
