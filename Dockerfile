@@ -8,7 +8,7 @@ RUN chmod 700 /root/.ssh/id_rsa
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 RUN mkdir -p /opt/webapp
-WORKDIR /tmp/app
+WORKDIR /tmp/
 RUN git clone git@github.com:RaulFTW/app.git
 
 RUN cp requirements.txt /tmp/
