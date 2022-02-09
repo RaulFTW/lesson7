@@ -2,6 +2,11 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y git python-flask python-all-dev python-pip
 
+RUN mkdir -p /root/.ssh
+ADD id_rsa /root/.ssh/id_rsa
+RUN chmod 700 /root/.ssh/id_rsa
+RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+
 RUN mkdir -p /opt/webapp
 WORKDIR /tmp/app
 RUN git clone git@github.com:RaulFTW/app.git
