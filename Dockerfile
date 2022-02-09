@@ -13,6 +13,7 @@ WORKDIR /tmp/app/
 RUN cp requirements.txt /tmp/
 RUN cp app.py /opt/webapp
 RUN cp Procfile /opt/webapp
+WORKDIR /tmp/
 RUN pip install -qr requirements.txt
 
 WORKDIR /opt/webapp/
