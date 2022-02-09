@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y python-flask python-all-dev python-pip
+RUN apt-get update && apt-get install -y git python-flask python-all-dev python-pip
 
 RUN mkdir -p /opt/webapp
 WORKDIR /tmp/app
