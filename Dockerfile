@@ -6,7 +6,7 @@ COPY requirements.txt /tmp/
 COPY app.py /opt/webapp
 COPY Procfile /opt/webapp
 
-RUN apt-get update && apt-get install -y python-all-dev python-pip
+RUN apt-get update && apt-get install -y python-flask python-all-dev python-pip
 WORKDIR /tmp/ && pip install -qr requirements.txt
 
 WORKDIR /opt/webapp/
