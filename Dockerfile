@@ -7,7 +7,7 @@ COPY app.py /opt/webapp
 COPY Procfile /opt/webapp
 
 RUN apt-get update && apt-get install -y python-all-dev python-pip
-RUN cd /tmp/ && pip install -qr requirements.txt
+WORKDIR /tmp/ && pip install -qr requirements.txt
 
 WORKDIR /opt/webapp/
 EXPOSE 5000
