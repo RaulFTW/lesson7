@@ -14,8 +14,7 @@ RUN git clone git@github.com:RaulFTW/app.git
 RUN cp requirements.txt /tmp/
 RUN cp app.py /opt/webapp
 RUN cp Procfile /opt/webapp
-
-WORKDIR /tmp/ && pip install -qr requirements.txt
+RUN pip install -qr requirements.txt
 
 WORKDIR /opt/webapp/
 EXPOSE 5000
